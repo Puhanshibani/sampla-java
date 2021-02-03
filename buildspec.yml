@@ -5,6 +5,7 @@ phases:
       java: corretto11
     commands:
       - echo Entered the install phase...
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
       - apt-get update -y
       - apt install maven
       
