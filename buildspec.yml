@@ -5,8 +5,8 @@ phases:
       java: corretto11
     commands:
       - echo Entered the install phase...
-      - sudo apt-get update
-      - sudo apt install maven
+      - apt-get update
+      - apt install maven
       
   pre_build:
     commands:
