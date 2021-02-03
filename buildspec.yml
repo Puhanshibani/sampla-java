@@ -3,12 +3,11 @@ phases:
   install:
     runtime-versions:
       java: openjdk11
-    # commands:
-    #   - echo Entered the install phase...
-    #   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-    #   - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-    #   - apt update
-    #   - apt install --no-install-recommends yarn
+    commands:
+      - echo Entered the install phase...
+      - sudo apt-get update
+      - sudo apt install maven
+      
   pre_build:
     commands:
       - echo Entered the pre_build phase...
@@ -18,6 +17,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - java -versions
+      - mvn -version
       # - echo Build started on 'date'
       # - yarn --version 
       # - yarn build
